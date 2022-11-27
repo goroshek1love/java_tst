@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.sandbox.GroupCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-27T08:59:37" hostname="jnv35346dfghh.local" time="1.846">
+  <properties/>
+  <testcase name="testUntitledTestCase" classname="ru.stqa.pft.sandbox.GroupCreationTests" time="1.846"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1669539572315	geckodriver	INFO	Listening on 127.0.0.1:13963
+1669539572470	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "33231" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://127.0.0.1:33231/,http://localhost:33231/,http://[::1]:33231/" "-foreground" "-no-remote" "-profile" "/var/folders/nf/wkzxl3dx4v5g4rq3jc1pv1kw0000gn/T/rust_mozprofiledzRP2p"
+1669539574353	Marionette	INFO	Marionette enabled
+1669539574553	Marionette	INFO	Listening on port 65068
+Read port: 65068
+2022-11-27 11:59:34.561 plugin-container[60376:10656291] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-27 11:59:34.562 plugin-container[60376:10656291] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:33231
+1669539574792	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2022-11-27 11:59:34.944 plugin-container[60376:10656291] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-27 11:59:34.944 plugin-container[60376:10656291] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-11-27 11:59:34.945 plugin-container[60376:10656299] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-27 11:59:34.945 plugin-container[60376:10656299] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/nf/wkzxl3dx4v5g4rq3jc1pv1kw0000gn/T/rust_mozprofiledzRP2p/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:33231/devtools/browser/3c4153d8-b4da-4b44-ad09-cb2efd02c865
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+]]></system-err>
+</testsuite>

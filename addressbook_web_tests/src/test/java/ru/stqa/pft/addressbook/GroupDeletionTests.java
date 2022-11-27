@@ -9,7 +9,7 @@ public class GroupDeletionTests extends TestBase {
         goToGroupPage();
         selectGroup();
         deleteSelectedGroups();
-        goToGroupPage();
+        returnToGroupPage();
     }
 
 }

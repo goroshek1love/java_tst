@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-29T11:15:54" hostname="jnv35346dfghh.local" time="1.57">
+  <properties/>
+  <testcase name="testGroupModification" classname="ru.stqa.pft.addressbook.tests.GroupModificationTests" time="1.57"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1669720549210	geckodriver	INFO	Listening on 127.0.0.1:38381
+1669720549369	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "17211" "--remote-allow-hosts" "localhost" "--remote-allow-origins" "http://127.0.0.1:17211/,http://localhost:17211/,http://[::1]:17211/" "-foreground" "-no-remote" "-profile" "/var/folders/nf/wkzxl3dx4v5g4rq3jc1pv1kw0000gn/T/rust_mozprofile1cF9Hk"
+1669720550624	Marionette	INFO	Marionette enabled
+2022-11-29 14:15:50.794 plugin-container[90207:11227631] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-29 14:15:50.794 plugin-container[90207:11227631] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-11-29 14:15:50.820 plugin-container[90207:11227631] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-29 14:15:50.820 plugin-container[90207:11227631] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-11-29 14:15:50.821 plugin-container[90207:11227629] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-29 14:15:50.821 plugin-container[90207:11227629] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1669720550902	Marionette	INFO	Listening on port 56544
+Read port: 56544
+WebDriver BiDi listening on ws://127.0.0.1:17211
+1669720551173	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/nf/wkzxl3dx4v5g4rq3jc1pv1kw0000gn/T/rust_mozprofile1cF9Hk/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:17211/devtools/browser/cb9f603a-021e-44b8-a681-a69a04f0fa6a
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost."
+1669720554651	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1669720556040	Marionette	INFO	Stopped listening on port 56544
+]]></system-err>
+</testsuite>

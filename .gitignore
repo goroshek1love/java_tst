@@ -19,3 +19,4 @@ addressbook_web_tests/build/reports/tests/test/packages/ru.stqa.pft.addressbook.
 addressbook_web_tests/build/test-results/test/binary/output.bin
 addressbook_web_tests/build/test-results/test/binary/output.bin.idx
 addressbook_web_tests/build/test-results/test/TEST-ru.stqa.pft.addressbook.tests.GroupModificationTests.xml
+addressbook_web_tests/build/reports/tests/test/classes/ru.stqa.pft.addressbook.tests.ContactCreationTests.html

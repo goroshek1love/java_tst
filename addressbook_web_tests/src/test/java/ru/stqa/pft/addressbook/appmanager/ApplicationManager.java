@@ -7,6 +7,7 @@ import org.openqa.selenium.remote.Browser;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.concurrent.TimeUnit;
+
 import static org.testng.Assert.fail;
 
 public class ApplicationManager {
@@ -14,6 +15,7 @@ public class ApplicationManager {
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
     private SessionHelper sessionHelper;
+    private ContactHelper contactHelper;
     private String baseUrl;
 
     private StringBuffer verificationErrors = new StringBuffer();
@@ -25,9 +27,9 @@ public class ApplicationManager {
     }
 
     public void init() {
-        if (browser.equals(Browser.FIREFOX)){
+        if (browser.equals(Browser.FIREFOX)) {
             driver = new FirefoxDriver();
-        } else if (browser.equals(Browser.CHROME)){
+        } else if (browser.equals(Browser.CHROME)) {
             driver = new ChromeDriver();
         } else {
             driver = new SafariDriver();
@@ -38,6 +40,7 @@ public class ApplicationManager {
         groupHelper = new GroupHelper(driver);
         navigationHelper = new NavigationHelper(driver);
         sessionHelper = new SessionHelper(driver);
+        contactHelper = new ContactHelper(driver);
         sessionHelper.login("admin", "secret");
     }
 
@@ -55,5 +58,9 @@ public class ApplicationManager {
 
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
+    }
+
+    public ContactHelper getContactHelper() {
+        return contactHelper;
     }
 }

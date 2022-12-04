@@ -12,3 +12,10 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+addressbook_web_tests/build/test-results/test/TEST-ru.stqa.pft.addressbook.tests.GroupModificationTests.xml
+addressbook_web_tests/build/reports/tests/test/classes/ru.stqa.pft.addressbook.tests.GroupModificationTests.html
+addressbook_web_tests/build/reports/tests/test/index.html
+addressbook_web_tests/build/reports/tests/test/packages/ru.stqa.pft.addressbook.tests.html
+addressbook_web_tests/build/test-results/test/binary/output.bin
+addressbook_web_tests/build/test-results/test/binary/output.bin.idx
+addressbook_web_tests/build/test-results/test/TEST-ru.stqa.pft.addressbook.tests.GroupModificationTests.xml

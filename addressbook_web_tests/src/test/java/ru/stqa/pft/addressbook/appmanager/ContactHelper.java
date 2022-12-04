@@ -15,7 +15,6 @@ public class ContactHelper extends HelperBase {
     }
 
     public void fillContactForm(ContactData contactData) {
-        //click(By.name("firstname"));
         type(By.name("firstname"), contactData.getFirstname());
         type(By.name("lastname"),  contactData.getLastname());
     }
@@ -26,5 +25,13 @@ public class ContactHelper extends HelperBase {
 
     public void returnToHomePage() {
         click(By.linkText("home page"));
+    }
+
+    public void initContactModification() {
+        click(By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void submitContactModification() {
+        click(By.xpath("//div[@id='content']/form/input[22]"));
     }
 }

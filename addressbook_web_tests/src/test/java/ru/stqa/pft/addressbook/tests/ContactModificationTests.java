@@ -1,19 +1,22 @@
 package ru.stqa.pft.addressbook.tests;
 
+import org.checkerframework.checker.units.qual.C;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
+
+import java.util.HashSet;
 
 public class ContactModificationTests extends TestBase {
 
     @Test(enabled = false)
     public void testContactModification(){
-        app.goTo().goToHomePage();
-        if (!app.getContactHelper().isThereAContact()){
-            app.getContactHelper().createContact(new ContactData("firstName1", "lastName2", "test1"));
+        app.goTo().homePage();
+        if (!app.contact().isThereAContact()){
+            app.contact().create(new ContactData().withLastName("testLastName"));
         }
-        app.getContactHelper().initContactModification();
-        app.getContactHelper().fillContactForm(new ContactData("firstName1", "lastName2", null), false);
-        app.getContactHelper().submitContactModification();
-        app.getContactHelper().returnToHomePage();
+        app.contact().initContactModification();
+        app.contact().fillContactForm(new ContactData().withFirstName("firstName1").withLastName("lastName2"), false);
+        app.contact().submitContactModification();
+        app.contact().returnToHomePage();
     }
 }

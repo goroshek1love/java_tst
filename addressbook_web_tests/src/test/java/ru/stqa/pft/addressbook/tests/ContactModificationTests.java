@@ -8,7 +8,7 @@ import java.util.HashSet;
 
 public class ContactModificationTests extends TestBase {
 
-    @Test(enabled = false)
+    @Test
     public void testContactModification(){
         app.goTo().homePage();
         if (!app.contact().isThereAContact()){

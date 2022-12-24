@@ -20,6 +20,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.10'
     implementation 'ch.qos.logback:logback-parent:1.4.5'
     implementation 'mysql:mysql-connector-java:8.0.31'
+    implementation 'org.hibernate.orm:hibernate-core:6.1.6.Final'
 }
 
 test {

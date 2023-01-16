@@ -1,36 +1,28 @@
-package ru.stqa.pft.addressbook.tests;
+package ru.stqa.pft.addressbook.appmanager;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.GroupData;
+import ru.stqa.pft.addressbook.model.Groups;
 
 import java.util.List;
 
-public class HbConnectionTest {
+public class DbHelper {
 
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
 
-    @BeforeClass
-    protected void setUp() throws Exception {
+    public DbHelper() {
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .configure() // configures settings from hibernate.cfg.xml
                 .build();
-        try {
             sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
-        } catch (Exception e) {
-            e.printStackTrace();
-            StandardServiceRegistryBuilder.destroy(registry);
-        }
+
     }
 
-    @Test
-    public void testHbConnectionForGroups() {
+    public Groups groups() {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         List<GroupData> result = session.createQuery("from GroupData").list();
@@ -39,17 +31,6 @@ public class HbConnectionTest {
         }
         session.getTransaction().commit();
         session.close();
-    }
-
-    @Test
-    public void testHbConnectionForContacts() {
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        List<ContactData> result = session.createQuery("from ContactData").list();
-        for (ContactData contact : result) {
-            System.out.println(contact);
-        }
-        session.getTransaction().commit();
-        session.close();
+        return new Groups(result);
     }
 }

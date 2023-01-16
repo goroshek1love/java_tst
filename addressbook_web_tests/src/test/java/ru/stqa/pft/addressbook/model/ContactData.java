@@ -1,18 +1,32 @@
 package ru.stqa.pft.addressbook.model;
 
+import jakarta.persistence.*;
+
 import java.io.File;
 import java.util.Objects;
 
+@Entity
+@Table(name = "addressbook")
 public class ContactData {
+    @Id
+    @Column(name = "id")
     private int id = 0;
+    @Column(name = "firstname")
     private String firstName;
+    @Column(name = "lastname")
     private String lastName;
+    @Transient
     private String group;
+    @Column(name = "home")
     private String homePhone;
+    @Column(name = "mobile")
     private String mobilePhone;
+    @Column(name = "work")
     private String workPhone;
+    @Transient
     private String allPhones;
-    private File photo;
+    @Transient
+    private String photo;
 
     public ContactData withId(int id) {
         this.id = id;
@@ -55,7 +69,7 @@ public class ContactData {
     }
 
     public ContactData withPhoto(File photo) {
-        this.photo = photo;
+        this.photo = photo.getAbsolutePath();
         return this;
     }
 
@@ -92,7 +106,7 @@ public class ContactData {
     }
 
     public File getPhoto() {
-        return photo;
+        return new File(photo);
     }
     @Override
     public boolean equals(Object o) {
@@ -110,5 +124,14 @@ public class ContactData {
         int result = lastName != null ? lastName.hashCode() : 0;
         result = 31 * result + id;
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "ContactData{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }

@@ -16,8 +16,7 @@ public class ApplicationManager {
     private GroupHelper groupHelper;
     private SessionHelper sessionHelper;
     private ContactHelper contactHelper;
-    private String baseUrl;
-
+    private DbHelper dbHelper;
     private StringBuffer verificationErrors = new StringBuffer();
     private Browser browser;
 
@@ -27,6 +26,8 @@ public class ApplicationManager {
     }
 
     public void init() {
+        dbHelper = new DbHelper();
+
         if (browser.equals(Browser.FIREFOX)) {
             driver = new FirefoxDriver();
         } else if (browser.equals(Browser.CHROME)) {
@@ -34,7 +35,6 @@ public class ApplicationManager {
         } else {
             driver = new SafariDriver();
         }
-        baseUrl = "https://www.google.com/";
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         driver.get("http://localhost/addressbook/index.php");
         groupHelper = new GroupHelper(driver);
@@ -62,5 +62,9 @@ public class ApplicationManager {
 
     public ContactHelper contact() {
         return contactHelper;
+    }
+
+    public DbHelper db() {
+        return dbHelper;
     }
 }
